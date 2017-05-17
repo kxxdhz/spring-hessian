@@ -1,0 +1,9 @@
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+<beans>
+    <bean id="defaultHandlerMapping" class="org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping"/>
+    <bean id="isayService" class="service.impl.IsayImpl"/>
+    <bean name="/isay" class="org.springframework.remoting.caucho.HessianServiceExporter">
+        <property name="service" ref="isayService"/>
+        <property name="serviceInterface" value="service.Isay"/>
+    </bean>
+</beans>

@@ -1,0 +1,8 @@
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">  
+<beans>  
+    <!-- 客户端Hessian代理工厂Bean -->  
+	<bean id="clientSpring" class="org.springframework.remoting.caucho.HessianProxyFactoryBean">  
+      	<property name="serviceUrl" value="http://localhost:8080/hessian/hessian/isay" />
+		<property name="serviceInterface" value="service.Isay" />
+  	</bean>  
+</beans>  
